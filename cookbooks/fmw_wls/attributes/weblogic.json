@@ -1,0 +1,16 @@
+{
+  "run_list": ["recipe[fmw_jdk::install]",
+               "recipe[fmw_wls::setup]",
+               "recipe[fmw_wls::install]"
+              ],
+  "fmw": {
+    "java_home_dir":       "/usr/java/default",
+    "middleware_home_dir": "/opt/ew/dcf/fsfn/fsfnst01"
+  },
+  "fmw_jdk": {
+    "source_file":         "/tmp/jdk-7u79-linux-x64.rpm"
+  },
+  "fmw_wls": {
+    "source_file":         "/tmp/fmw_12.1.3.0.0_wls.jar"
+  }
+}

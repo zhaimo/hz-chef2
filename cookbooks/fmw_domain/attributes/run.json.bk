@@ -1,0 +1,96 @@
+{
+  "run_list": [ "recipe[fmw_domain::domain]",
+               "recipe[fmw_domain::nodemanager]",
+               "recipe[fmw_domain::adminserver]"
+              ],
+  "fmw": {
+    "java_home_dir":       "/usr/java/default",
+    "middleware_home_dir": "/opt/ew/dcf/fsfn/fsfnst01",
+    "weblogic_home_dir":   "/opt/ew/dcf/fsfn/fsfnst01/wlserver",
+    "version":             "12.1.3"
+  },
+  "fmw_domain": {
+    "databag_key":                "DEV_WLS1",
+    "domains_dir":                "/opt/ew/dcf/fsfn/fsfnst01/user_projects/domains",
+    "apps_dir":                   "/opt/ew/dcf/fsfn/fsfnst01/user_projects/domains/applications",
+    "nodemanager_listen_address": "172.27.32.137",
+    "nodemanagers": [
+      {
+        "id": "node1",
+        "listen_address": "172.27.32.137"
+      }
+    ],
+    "servers": [
+      {
+        "id": "fsfn01",
+        "nodemanager": "node1",
+        "listen_address": "172.27.32.137",
+        "listen_port": 8001,
+        "arguments": "-DsecurityEnabled=false -DtranStatsOn=true -DmflogTranStat=false -DfsfnEventMgrImpl=com.ams.sacwis.event.impl.controls.JmsNativeEventImpl -XX:PermSize=256m -XX:MaxPermSize=512m -Xms512m -Xmx512m"
+      },
+      {
+        "id": "fsfn02",
+        "nodemanager": "node1",
+        "listen_address": "172.27.32.137",
+        "listen_port": 9001,
+        "arguments": "-DsecurityEnabled=false -DtranStatsOn=true -DmflogTranStat=false -DfsfnEventMgrImpl=com.ams.sacwis.event.impl.controls.JmsNativeEventImpl -XX:PermSize=256m -XX:MaxPermSize=512m -Xms512m -Xmx512m"
+      },
+      {
+        "id": "fsfn03",
+        "nodemanager": "node1",
+        "listen_address": "172.27.32.137",
+        "listen_port": 10001,
+        "arguments": "-DsecurityEnabled=false -DtranStatsOn=true -DmflogTranStat=false -DfsfnEventMgrImpl=com.ams.sacwis.event.impl.controls.JmsNativeEventImpl -XX:PermSize=256m -XX:MaxPermSize=512m -Xms512m -Xmx512m"
+      },
+      {
+        "id": "fsfn04",
+        "nodemanager": "node1",
+        "listen_address": "172.27.32.137",
+        "listen_port": 11001,
+        "arguments": "-DsecurityEnabled=false -DtranStatsOn=true -DmflogTranStat=false -DfsfnEventMgrImpl=com.ams.sacwis.event.impl.controls.JmsNativeEventImpl -XX:PermSize=256m -XX:MaxPermSize=512m -Xms512m -Xmx512m"
+      },
+      {
+        "id": "fsfn05",
+        "nodemanager": "node1",
+        "listen_address": "172.27.32.137",
+        "listen_port": 12001,
+        "arguments": "-DsecurityEnabled=false -DtranStatsOn=true -DmflogTranStat=false -DfsfnEventMgrImpl=com.ams.sacwis.event.impl.controls.JmsNativeEventImpl -XX:PermSize=256m -XX:MaxPermSize=512m -Xms512m -Xmx512m"
+      },
+      {
+        "id": "fsfn06",
+        "nodemanager": "node1",
+        "listen_address": "172.27.32.137",
+        "listen_port": 13001,
+        "arguments": "-DsecurityEnabled=false -DtranStatsOn=true -DmflogTranStat=false -DfsfnEventMgrImpl=com.ams.sacwis.event.impl.controls.JmsNativeEventImpl -XX:PermSize=256m -XX:MaxPermSize=512m -Xms512m -Xmx512m"
+      },
+      {
+        "id": "fsfn07",
+        "nodemanager": "node1",
+        "listen_address": "172.27.32.137",
+        "listen_port": 14001,
+        "arguments": "-DsecurityEnabled=false -DtranStatsOn=true -DmflogTranStat=false -DfsfnEventMgrImpl=com.ams.sacwis.event.impl.controls.JmsNativeEventImpl -XX:PermSize=256m -XX:MaxPermSize=512m -Xms512m -Xmx512m"
+      },
+      {
+        "id": "fsfn08",
+        "nodemanager": "node1",
+        "listen_address": "172.27.32.137",
+        "listen_port": 15001,
+        "arguments": "-DsecurityEnabled=false -DtranStatsOn=true -DmflogTranStat=false -DfsfnEventMgrImpl=com.ams.sacwis.event.impl.controls.JmsNativeEventImpl -XX:PermSize=256m -XX:MaxPermSize=512m -Xms512m -Xmx512m"
+      }
+    ],
+    "clusters": [
+      {
+        "id": "fsfn_dev",
+        "members": ["fsfn01",
+                    "fsfn02",
+                    "fsfn03",
+                    "fsfn04",
+                    "fsfn05",
+                    "fsfn06",
+                    "fsfn07",
+                    "fsfn08"]
+      }
+    ]
+  }
+}
+

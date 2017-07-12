@@ -1,0 +1,9 @@
+{
+    "id":                            "DEV_WLS1",
+    "domain_name":                   "dcffsfn",
+    "weblogic_user":                 "weblogic",
+    "weblogic_password":             "Welcome01",
+    "adminserver_name":              "AdminServer",
+    "adminserver_listen_address":    "AWS-FSFN-LVDA-BODS01",
+    "adminserver_listen_port":       "7001"
+}

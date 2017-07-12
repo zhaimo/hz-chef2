@@ -1,0 +1,162 @@
+recipes/domain.rb:45:  wls_base_template = "#{node['fmw']['weblogic_home_dir']}/common/templates/wls/wls.jar"
+recipes/domain.rb:47:  wls_base_template = "#{node['fmw']['weblogic_home_dir']}/common/templates/domains/wls.jar"
+recipes/domain.rb:62:              wls_base_template:             wls_base_template,
+recipes/domain.rb:129:              wls_base_template:             wls_base_template,
+files/default/domain/common.py:60:  cd('Security/base_domain/User/weblogic')
+templates/default/domain/domain.py:7:BASE_TEMPLATE  = '<%= @wls_base_template %>'
+templates/default/domain/extensions/bam.py:31:REPOS_DBURL         = '<%= @repository_database_url %>'
+templates/default/domain/extensions/bam.py:102:    print 'Call getDatabaseDefaults which reads the service table'
+templates/default/domain/extensions/bam.py:103:    getDatabaseDefaults()
+templates/default/domain/extensions/enterprise_scheduler.py:31:REPOS_DBURL         = '<%= @repository_database_url %>'
+templates/default/domain/extensions/enterprise_scheduler.py:62:print 'Call getDatabaseDefaults which reads the service table'
+templates/default/domain/extensions/enterprise_scheduler.py:63:getDatabaseDefaults()
+templates/default/domain/extensions/jrf.py:23:REPOS_DBURL         = '<%= @repository_database_url %>'
+templates/default/domain/extensions/jrf.py:43:        print 'Call getDatabaseDefaults which reads the service table'
+templates/default/domain/extensions/jrf.py:44:        getDatabaseDefaults()
+templates/default/domain/extensions/service_bus.py:31:REPOS_DBURL         = '<%= @repository_database_url %>'
+templates/default/domain/extensions/service_bus.py:98:    print 'Call getDatabaseDefaults which reads the service table'
+templates/default/domain/extensions/service_bus.py:99:    getDatabaseDefaults()
+templates/default/domain/extensions/soa_suite.py:38:REPOS_DBURL         = '<%= @repository_database_url %>'
+templates/default/domain/extensions/soa_suite.py:144:    print 'Call getDatabaseDefaults which reads the service table'
+templates/default/domain/extensions/soa_suite.py:145:    getDatabaseDefaults()
+templates/default/domain/extensions/webtier.py:23:REPOS_DBURL         = '<%= @repository_database_url %>'
+templates/default/domain/extensions/webtier.py:43:    print 'Call getDatabaseDefaults which reads the service table'
+templates/default/domain/extensions/webtier.py:44:    getDatabaseDefaults()
+spec/unit/recipes/adminserver_spec.rb:90:                                                               domain_name:                'base',
+spec/unit/recipes/adminserver_spec.rb:124:                                                               domain_name:                'base',
+spec/unit/recipes/adminserver_spec.rb:135:        domain_dir: '/opt/oracle/middleware_xxx/user_projects/domains/base',
+spec/unit/recipes/adminserver_spec.rb:136:        domain_name: 'base',
+spec/unit/recipes/adminserver_spec.rb:172:                                                               domain_name:                'base',
+spec/unit/recipes/adminserver_spec.rb:183:        domain_dir: 'c:\\oracle\\middleware_xxx\\user_projects\\domains/base',
+spec/unit/recipes/adminserver_spec.rb:184:        domain_name: 'base',
+spec/unit/recipes/domain_spec.rb:116:                                                               domain_name:                'base',
+spec/unit/recipes/domain_spec.rb:137:                     :wls_base_template=>"/opt/oracle/middleware_xxx/wlserver/common/templates/wls/wls.jar",
+spec/unit/recipes/domain_spec.rb:138:                     :domain_dir=>"/opt/oracle/middleware_xxx/user_projects/domains/base", 
+spec/unit/recipes/domain_spec.rb:139:                     :domain_name=>"base", 
+spec/unit/recipes/domain_spec.rb:188:                                                               domain_name:                'base',
+spec/unit/recipes/domain_spec.rb:205:                     :wls_base_template=>"c:\\oracle\\middleware_xxx\\wlserver/common/templates/wls/wls.jar", 
+spec/unit/recipes/domain_spec.rb:206:                     :domain_dir=>"c:\\oracle\\middleware_xxx\\user_projects\\domains/base",
+spec/unit/recipes/domain_spec.rb:207:                     :domain_name=>"base",
+spec/unit/recipes/domain_spec.rb:252:                                                               domain_name:                'base',
+spec/unit/recipes/domain_spec.rb:274:          :wls_base_template=>"/opt/oracle/middleware_xxx/wlserver_10.3/common/templates/domains/wls.jar",
+spec/unit/recipes/domain_spec.rb:275:          :domain_dir=>"/opt/oracle/middleware_xxx/user_projects/domains/base",
+spec/unit/recipes/domain_spec.rb:276:          :domain_name=>"base",
+spec/unit/recipes/domain_spec.rb:324:                                                               domain_name:                'base',
+spec/unit/recipes/domain_spec.rb:341:                     :wls_base_template=>"c:\\oracle\\middleware_xxx\\wlserver_10.3/common/templates/domains/wls.jar", 
+spec/unit/recipes/domain_spec.rb:342:                     :domain_dir=>"c:\\oracle\\middleware_xxx\\user_projects\\domains/base",
+spec/unit/recipes/domain_spec.rb:343:                     :domain_name=>"base",
+spec/unit/recipes/extension_service_bus_spec.rb:24:        node.set['fmw_rcu']['jdbc_database_url']       = 'jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com'
+spec/unit/recipes/extension_service_bus_spec.rb:25:        node.set['fmw_rcu']['db_database_url']         = '10.10.10.15:1521:soarepos.example.com'
+spec/unit/recipes/extension_service_bus_spec.rb:37:      stub_data_bag_item("fmw_databases", "entry1").and_return({ id: 'entry1',
+spec/unit/recipes/extension_service_bus_spec.rb:42:                                                               domain_name:                'base',
+spec/unit/recipes/extension_service_bus_spec.rb:48:                                                               repository_database_url:    "jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com",
+spec/unit/recipes/extension_service_bus_spec.rb:65:          :domain_dir=>"/opt/oracle/middleware_xxx/user_projects/domains/base", 
+spec/unit/recipes/extension_service_bus_spec.rb:66:          :domain_name=>"base", 
+spec/unit/recipes/extension_service_bus_spec.rb:67:          :app_dir=>"/opt/oracle/middleware_xxx/user_projects/applications/base", 
+spec/unit/recipes/extension_service_bus_spec.rb:81:          :repository_database_url=>"jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com", 
+spec/unit/recipes/extension_service_bus_spec.rb:114:        node.set['fmw_rcu']['jdbc_database_url']       = 'jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com'
+spec/unit/recipes/extension_service_bus_spec.rb:115:        node.set['fmw_rcu']['db_database_url']         = '10.10.10.15:1521:soarepos.example.com'
+spec/unit/recipes/extension_service_bus_spec.rb:127:      stub_data_bag_item("fmw_databases", "entry1").and_return({ id: 'entry1',
+spec/unit/recipes/extension_service_bus_spec.rb:134:                                                               domain_name:                'base',
+spec/unit/recipes/extension_service_bus_spec.rb:140:                                                               repository_database_url:    "jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com",
+spec/unit/recipes/extension_service_bus_spec.rb:157:            :domain_dir=>"c:/oracle/middleware_xxx/user_projects/domains/base", 
+spec/unit/recipes/extension_service_bus_spec.rb:158:            :domain_name=>"base", 
+spec/unit/recipes/extension_service_bus_spec.rb:159:            :app_dir=>"c:/oracle/middleware_xxx/user_projects/applications/base", 
+spec/unit/recipes/extension_service_bus_spec.rb:173:            :repository_database_url=>"jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com", 
+spec/unit/recipes/extension_service_bus_spec.rb:205:        node.set['fmw_rcu']['jdbc_database_url']        = 'jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com'
+spec/unit/recipes/extension_service_bus_spec.rb:206:        node.set['fmw_rcu']['db_database_url']          = '10.10.10.15:1521:soarepos.example.com'
+spec/unit/recipes/extension_service_bus_spec.rb:218:      stub_data_bag_item("fmw_databases", "entry1").and_return({ id: 'entry1',
+spec/unit/recipes/extension_service_bus_spec.rb:225:                                                               domain_name:                'base',
+spec/unit/recipes/extension_service_bus_spec.rb:231:                                                               repository_database_url:    "jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com",
+spec/unit/recipes/extension_service_bus_spec.rb:249:            :domain_dir=>"/opt/oracle/middleware_xxx/user_projects/domains/base", 
+spec/unit/recipes/extension_service_bus_spec.rb:250:            :domain_name=>"base", 
+spec/unit/recipes/extension_service_bus_spec.rb:251:            :app_dir=>"/opt/oracle/middleware_xxx/user_projects/applications/base", 
+spec/unit/recipes/extension_service_bus_spec.rb:265:            :repository_database_url=>"jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com", 
+spec/unit/recipes/extension_service_bus_spec.rb:300:        node.set['fmw_rcu']['jdbc_database_url']        = 'jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com'
+spec/unit/recipes/extension_service_bus_spec.rb:301:        node.set['fmw_rcu']['db_database_url']          = '10.10.10.15:1521:soarepos.example.com'
+spec/unit/recipes/extension_service_bus_spec.rb:313:      stub_data_bag_item("fmw_databases", "entry1").and_return({ id: 'entry1',
+spec/unit/recipes/extension_service_bus_spec.rb:320:                                                               domain_name:                'base',
+spec/unit/recipes/extension_service_bus_spec.rb:326:                                                               repository_database_url:    "jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com",
+spec/unit/recipes/extension_service_bus_spec.rb:342:            :domain_dir=>"c:/oracle/middleware_xxx/user_projects/domains/base", 
+spec/unit/recipes/extension_service_bus_spec.rb:343:            :domain_name=>"base", 
+spec/unit/recipes/extension_service_bus_spec.rb:344:            :app_dir=>"c:/oracle/middleware_xxx/user_projects/applications/base", 
+spec/unit/recipes/extension_service_bus_spec.rb:358:            :repository_database_url=>"jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com", 
+spec/unit/recipes/extension_soa_suite_spec.rb:24:        node.set['fmw_rcu']['jdbc_database_url']       = 'jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com'
+spec/unit/recipes/extension_soa_suite_spec.rb:25:        node.set['fmw_rcu']['db_database_url']         = '10.10.10.15:1521:soarepos.example.com'
+spec/unit/recipes/extension_soa_suite_spec.rb:37:      stub_data_bag_item("fmw_databases", "entry1").and_return({ id: 'entry1',
+spec/unit/recipes/extension_soa_suite_spec.rb:42:                                                               domain_name:                'base',
+spec/unit/recipes/extension_soa_suite_spec.rb:48:                                                               repository_database_url:    "jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com",
+spec/unit/recipes/extension_soa_suite_spec.rb:66:             :domain_dir=>"/opt/oracle/middleware_xxx/user_projects/domains/base", 
+spec/unit/recipes/extension_soa_suite_spec.rb:67:             :domain_name=>"base",
+spec/unit/recipes/extension_soa_suite_spec.rb:68:             :app_dir=>"/opt/oracle/middleware_xxx/user_projects/applications/base", 
+spec/unit/recipes/extension_soa_suite_spec.rb:86:             :repository_database_url=>"jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com", 
+spec/unit/recipes/extension_soa_suite_spec.rb:119:        node.set['fmw_rcu']['jdbc_database_url']       = 'jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com'
+spec/unit/recipes/extension_soa_suite_spec.rb:120:        node.set['fmw_rcu']['db_database_url']         = '10.10.10.15:1521:soarepos.example.com'
+spec/unit/recipes/extension_soa_suite_spec.rb:132:      stub_data_bag_item("fmw_databases", "entry1").and_return({ id: 'entry1',
+spec/unit/recipes/extension_soa_suite_spec.rb:139:                                                               domain_name:                'base',
+spec/unit/recipes/extension_soa_suite_spec.rb:145:                                                               repository_database_url:    "jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com",
+spec/unit/recipes/extension_soa_suite_spec.rb:161:          :domain_dir=>"c:/oracle/middleware_xxx/user_projects/domains/base", 
+spec/unit/recipes/extension_soa_suite_spec.rb:162:          :domain_name=>"base", 
+spec/unit/recipes/extension_soa_suite_spec.rb:163:          :app_dir=>"c:/oracle/middleware_xxx/user_projects/applications/base", 
+spec/unit/recipes/extension_soa_suite_spec.rb:182:          :repository_database_url=>"jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com", 
+spec/unit/recipes/extension_soa_suite_spec.rb:214:        node.set['fmw_rcu']['jdbc_database_url']        = 'jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com'
+spec/unit/recipes/extension_soa_suite_spec.rb:215:        node.set['fmw_rcu']['db_database_url']          = '10.10.10.15:1521:soarepos.example.com'
+spec/unit/recipes/extension_soa_suite_spec.rb:227:      stub_data_bag_item("fmw_databases", "entry1").and_return({ id: 'entry1',
+spec/unit/recipes/extension_soa_suite_spec.rb:234:                                                               domain_name:                'base',
+spec/unit/recipes/extension_soa_suite_spec.rb:240:                                                               repository_database_url:    "jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com",
+spec/unit/recipes/extension_soa_suite_spec.rb:258:            :domain_dir=>"/opt/oracle/middleware_xxx/user_projects/domains/base", 
+spec/unit/recipes/extension_soa_suite_spec.rb:259:            :domain_name=>"base", 
+spec/unit/recipes/extension_soa_suite_spec.rb:260:            :app_dir=>"/opt/oracle/middleware_xxx/user_projects/applications/base", 
+spec/unit/recipes/extension_soa_suite_spec.rb:279:            :repository_database_url=>"jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com", 
+spec/unit/recipes/extension_soa_suite_spec.rb:315:        node.set['fmw_rcu']['jdbc_database_url']        = 'jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com'
+spec/unit/recipes/extension_soa_suite_spec.rb:316:        node.set['fmw_rcu']['db_database_url']          = '10.10.10.15:1521:soarepos.example.com'
+spec/unit/recipes/extension_soa_suite_spec.rb:328:      stub_data_bag_item("fmw_databases", "entry1").and_return({ id: 'entry1',
+spec/unit/recipes/extension_soa_suite_spec.rb:335:                                                               domain_name:                'base',
+spec/unit/recipes/extension_soa_suite_spec.rb:341:                                                               repository_database_url:    "jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com",
+spec/unit/recipes/extension_soa_suite_spec.rb:357:            :domain_dir=>"c:/oracle/middleware_xxx/user_projects/domains/base", 
+spec/unit/recipes/extension_soa_suite_spec.rb:358:            :domain_name=>"base", 
+spec/unit/recipes/extension_soa_suite_spec.rb:359:            :app_dir=>"c:/oracle/middleware_xxx/user_projects/applications/base", 
+spec/unit/recipes/extension_soa_suite_spec.rb:377:            :repository_database_url=>"jdbc:oracle:thin:@10.10.10.15:1521/soarepos.example.com", 
+spec/unit/recipes/nodemanager_spec.rb:108:                                                               domain_name:                'base',
+spec/unit/recipes/nodemanager_spec.rb:142:      stub_command("chkconfig | /bin/grep 'nodemanager_base'").and_return(false)
+spec/unit/recipes/nodemanager_spec.rb:144:                                                               domain_name:                'base',
+spec/unit/recipes/nodemanager_spec.rb:154:      expect(chef_run).to create_template('/opt/oracle/middleware_xxx/user_projects/domains/base/nodemanager/nodemanager.properties').with(
+spec/unit/recipes/nodemanager_spec.rb:161:          :nodemanager_log_dir=>"/opt/oracle/middleware_xxx/user_projects/domains/base/nodemanager/nodemanager.log",
+spec/unit/recipes/nodemanager_spec.rb:162:          :domain_dir=>"/opt/oracle/middleware_xxx/user_projects/domains/base",
+spec/unit/recipes/nodemanager_spec.rb:169:      expect(chef_run).to create_template('/etc/init.d/nodemanager_base').with(
+spec/unit/recipes/nodemanager_spec.rb:173:          :nodemanager_lock_file=>"/opt/oracle/middleware_xxx/user_projects/domains/base/nodemanager/nodemanager.log.lck",
+spec/unit/recipes/nodemanager_spec.rb:174:          :nodemanager_bin_path=>"/opt/oracle/middleware_xxx/user_projects/domains/base/bin",
+spec/unit/recipes/nodemanager_spec.rb:175:          :nodemanager_check=>"/opt/oracle/middleware_xxx/user_projects/domains/base",
+spec/unit/recipes/nodemanager_spec.rb:179:      expect(chef_run).to configure_fmw_domain_nodemanager_service('nodemanager_base').with(
+spec/unit/recipes/nodemanager_spec.rb:183:      expect(chef_run).to run_execute('chkconfig nodemanager_base').with(
+spec/unit/recipes/nodemanager_spec.rb:184:        command: 'chkconfig --add nodemanager_base'
+spec/unit/recipes/nodemanager_spec.rb:186:      expect(chef_run).to start_service('nodemanager_base')
+spec/unit/recipes/nodemanager_spec.rb:211:                                                               domain_name:                'base',
+spec/unit/recipes/nodemanager_spec.rb:221:      expect(chef_run).to create_template('/opt/oracle/middleware_xxx/user_projects/domains/base/nodemanager/nodemanager.properties').with(
+spec/unit/recipes/nodemanager_spec.rb:228:          :nodemanager_log_dir=>"/opt/oracle/middleware_xxx/user_projects/domains/base/nodemanager/nodemanager.log",
+spec/unit/recipes/nodemanager_spec.rb:229:          :domain_dir=>"/opt/oracle/middleware_xxx/user_projects/domains/base",
+spec/unit/recipes/nodemanager_spec.rb:236:      expect(chef_run).to create_template('/home/oracle/nodemanager_base').with(
+spec/unit/recipes/nodemanager_spec.rb:240:          :nodemanager_lock_file=>"/opt/oracle/middleware_xxx/user_projects/domains/base/nodemanager/nodemanager.log.lck",
+spec/unit/recipes/nodemanager_spec.rb:241:          :nodemanager_bin_path=>"/opt/oracle/middleware_xxx/user_projects/domains/base/bin",
+spec/unit/recipes/nodemanager_spec.rb:242:          :nodemanager_check=>"/opt/oracle/middleware_xxx/user_projects/domains/base",
+spec/unit/recipes/nodemanager_spec.rb:245:      expect(chef_run).to configure_fmw_domain_nodemanager_service('nodemanager_base').with(
+spec/unit/recipes/nodemanager_spec.rb:256:      resource3 = chef_run.template('/lib/systemd/system/nodemanager_base.service')
+spec/unit/recipes/nodemanager_spec.rb:259:      expect(resource3).to notify('service[nodemanager_base.service]').to(:enable).immediately
+spec/unit/recipes/nodemanager_spec.rb:260:      expect(resource3).to notify('service[nodemanager_base.service]').to(:restart).immediately
+spec/unit/recipes/nodemanager_spec.rb:262:      expect(chef_run).to start_service('nodemanager_base.service')
+spec/unit/recipes/nodemanager_spec.rb:264:      expect(chef_run).to create_template('/lib/systemd/system/nodemanager_base.service').with(
+spec/unit/recipes/nodemanager_spec.rb:267:          :script_name=>"nodemanager_base",
+spec/unit/recipes/nodemanager_spec.rb:295:                                                               domain_name:                'base',
+spec/unit/recipes/nodemanager_spec.rb:305:      expect(chef_run).to create_template('c:\\oracle\\middleware_xxx\\user_projects\\domains/base/nodemanager/nodemanager.properties').with(
+spec/unit/recipes/nodemanager_spec.rb:310:          :nodemanager_log_dir=>"c:/oracle/middleware_xxx/user_projects/domains/base/nodemanager/nodemanager.log",
+spec/unit/recipes/nodemanager_spec.rb:311:          :domain_dir=>"c:/oracle/middleware_xxx/user_projects/domains/base",
+spec/unit/recipes/nodemanager_spec.rb:318:      expect(chef_run).to configure_fmw_domain_nodemanager_service('nodemanager_base').with(
+spec/unit/recipes/nodemanager_spec.rb:319:        domain_dir: 'c:\\oracle\\middleware_xxx\\user_projects\\domains/base',
+spec/unit/recipes/nodemanager_spec.rb:320:        domain_name: 'base',
+spec/unit/recipes/nodemanager_spec.rb:323:        bin_dir: 'c:\\oracle\\middleware_xxx\\user_projects\\domains/base/bin',
+spec/unit/recipes/nodemanager_spec.rb:351:                                                               domain_name:                'base',
+spec/unit/recipes/nodemanager_spec.rb:369:          :domain_dir=>"/opt/oracle/middleware_xxx/user_projects/domains/base",
+spec/unit/recipes/nodemanager_spec.rb:418:                                                               domain_name:                'base',
+spec/unit/recipes/nodemanager_spec.rb:434:          :domain_dir=>"c:/oracle/middleware_xxx/user_projects/domains/base",
+spec/unit/recipes/nodemanager_spec.rb:442:        domain_dir: 'c:\\oracle\\middleware_xxx\\user_projects\\domains/base',
+spec/unit/recipes/nodemanager_spec.rb:443:        domain_name: 'base',
